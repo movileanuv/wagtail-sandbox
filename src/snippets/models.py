@@ -1,11 +1,12 @@
 from django.db import models
 
 from wagtail.admin.panels import FieldPanel
+from wagtail.models import TranslatableMixin
 from wagtail.snippets.models import register_snippet
 
 
 @register_snippet
-class Advert(models.Model):
+class Advert(TranslatableMixin, models.Model):
     url = models.URLField(null=True, blank=True)
     text = models.CharField(max_length=255)
 
