@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     'taggit',
 
     # custom apps
-    'pages'
+    'pages',
+    'snippets',
 ]
 
 MIDDLEWARE = [
