@@ -9,3 +9,5 @@
   >>> p.body.raw_data = []
   >>> p.save()
   ```
+* Wagtail Internationalization: https://docs.wagtail.org/en/stable/advanced_topics/i18n.html
+* Wagtail localize: https://www.wagtail-localize.org/how-to/field-configuration/
