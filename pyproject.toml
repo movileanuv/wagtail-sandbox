@@ -10,6 +10,7 @@ packages = [{include = "wagtail_tutorial"}]
 python = "^3.9"
 Django = "^4.1.3"
 wagtail = "^4.1.1"
+wagtail-localize = "^1.3.2"
 
 
 [build-system]

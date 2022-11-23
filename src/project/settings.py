@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
 
+    "wagtail_localize",
+    "wagtail_localize.locales",  # This replaces "wagtail.locales"
+
     # custom apps
     'pages',
     'snippets',
@@ -96,7 +99,7 @@ WSGI_APPLICATION = "project.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db-home-page.sqlite3",
+        "NAME": BASE_DIR / "db-localize.sqlite3",
     }
 }
 
@@ -128,6 +131,8 @@ LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
 
 USE_I18N = True
+WAGTAIL_I18N_ENABLED = True
+USE_L10N = True
 
 USE_TZ = True
 
@@ -147,3 +152,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
 
 WAGTAIL_SITE_NAME = 'Wagtail Tutorial'
+
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
+    ('en', "English"),
+    ('de', "German"),
+]
