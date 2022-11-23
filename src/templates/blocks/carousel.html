@@ -1,0 +1,11 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+
+<ul class="carousel">
+    {% for slide in block.value %}
+        {% if slide.block_type == 'image' %}
+            <li class="image">{% image slide.value width-200 %}</li>
+        {% else %}
+            <li class="video">{% include_block slide %}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
