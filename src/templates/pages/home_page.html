@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load wagtailimages_tags %}
 {% load wagtailcore_tags %}
 
 {% block body %}
@@ -7,15 +6,7 @@
     <p>{{ self.subheading|richtext }}</p>
     <article>
         {% for block in page.body %}
-            {% if block.block_type == 'person' %}
-                <div class="person">
-                    {% image block.value.photo width-400 %}
-                    <h2>{{ block.value.first_name }} {{ block.value.surname }}</h2>
-                    {{ block.value.biography }}
-                </div>
-            {% else %}
-                <section>{% include_block block %}</section>
-            {% endif %}
+            <section>{% include_block block %}</section>
         {% endfor %}
     </article>
 {% endblock %}

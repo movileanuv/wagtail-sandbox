@@ -7,3 +7,7 @@ class PersonBlock(blocks.StructBlock):
     surname = blocks.CharBlock()
     photo = ImageChooserBlock(required=False)
     biography = blocks.RichTextBlock()
+
+    class Meta:
+        template = "blocks/person.html"
+        icon = "user"
