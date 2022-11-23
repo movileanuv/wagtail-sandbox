@@ -11,7 +11,13 @@ class HomePage(Page):
     body = StreamField([
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
-        ('document', DocumentChooserBlock())
+        ('document', DocumentChooserBlock()),
+        ('person', blocks.StructBlock([
+            ('first_name', blocks.CharBlock()),
+            ('surname', blocks.CharBlock()),
+            ('photo', ImageChooserBlock(required=False)),
+            ('biography', blocks.RichTextBlock()),
+        ])),
     ], use_json_field=True, null=True)
 
     content_panels = Page.content_panels + [
