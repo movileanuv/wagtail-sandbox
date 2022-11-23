@@ -15,6 +15,7 @@ class HomePage(Page):
         ('image', ImageChooserBlock()),
         ('document', DocumentChooserBlock()),
         ('person', PersonBlock()),
+        ('gallery', blocks.ListBlock(ImageChooserBlock(), template="blocks/gallery.html")),
     ], use_json_field=True, null=True)
 
     content_panels = Page.content_panels + [

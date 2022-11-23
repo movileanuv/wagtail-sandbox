@@ -1,0 +1,7 @@
+{% load wagtailimages_tags %}
+
+<ul class="gallery">
+    {% for img in block.value %}
+        <li>{% image img width-400 %}</li>
+    {% endfor %}
+</ul>
