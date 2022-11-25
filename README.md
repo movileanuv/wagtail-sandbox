@@ -1,3 +1,4 @@
+* Follow the commit history for a step by step introduction
 * More on StreamFields: https://docs.wagtail.org/en/stable/topics/streamfield.html#limiting-block-counts
 * Accessing data on StreamFields and reset to empty:
   ```python
